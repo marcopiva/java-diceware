@@ -37,7 +37,7 @@ public class Main {
 
     	Map<String, String> map = new HashMap<String, String>();
 //    	InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("word_list.txt");
-    	InputStream is = Main.class.getClass().getResourceAsStream("/word_list.txt");
+    	InputStream is = Main.class.getClass().getResourceAsStream("/italian_wordlist.txt");
     	
     	String stringFromStream = CharStreams.toString(new InputStreamReader(is, "UTF-8"));
     	
@@ -72,14 +72,6 @@ public class Main {
             URI uri = builder.build();
             
             HttpGet httpget = new HttpGet(uri);
-            
-        	httpclient.getCredentialsProvider().setCredentials(
-                    new AuthScope("", 3128),
-                    new UsernamePasswordCredentials("", ""));
-            HttpHost proxy = new HttpHost("", 3128);
-
-            httpclient.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxy);
-
 
             // Create a response handler
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
