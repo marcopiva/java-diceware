@@ -6,7 +6,7 @@
   <packaging>jar</packaging>
 
 	<name>java-diceware</name>
-	<description>Un generatore di passphrase diceware</description>
+	<description>A diceware passphrase generator</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
